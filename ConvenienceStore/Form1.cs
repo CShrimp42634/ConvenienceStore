@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConvenienceStore.src.domain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace ConvenienceStore
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Product product = Product.Create("가나", 10000);
         }
     }
 }

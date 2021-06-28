@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConvenienceStore.src.domain
+﻿namespace ConvenienceStore.src.domain
 {
     /// <summary>
     /// 상품
@@ -14,10 +8,43 @@ namespace ConvenienceStore.src.domain
         /// <summary>
         /// 상품 이름
         /// </summary>
-        public string Name;
+        public string Name { get; private set; }
         /// <summary>
         /// 상품 가격
         /// </summary>
-        public int price;
+        public int Price { get; private set; }
+
+        /// <summary>
+        /// 상품 설명
+        /// </summary>
+        public string Description;
+
+        /// <summary>
+        /// 생성자 (외부 생성 차단)
+        /// </summary>
+        protected Product()
+        {
+
+        }
+
+        public override string ToString()
+        {
+            return $"상품명:{Name} | 가격: {Price}";
+        }
+
+        /// <summary>
+        /// Product 생성 함수
+        /// </summary>
+        /// <param name="Name">상품 명</param>
+        /// <param name="Price">상품 가격</param>
+        /// <returns>상품</returns>
+        public static Product Create(string Name, int Price)
+        {
+            Product product = new Product();
+            product.Name = Name;
+            product.Price = Price;
+
+            return product;
+        }
     }
 }
