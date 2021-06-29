@@ -20,7 +20,7 @@ namespace ConvenienceStore
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Product product = Product.Create("가나", 10000);
+            Product product = Product.Create(1, "가나", 10000);
         }
     }
 }

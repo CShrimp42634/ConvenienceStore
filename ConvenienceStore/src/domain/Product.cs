@@ -6,6 +6,10 @@
     class Product
     {
         /// <summary>
+        /// 상품 아아디
+        /// </summary>
+        public int Id { get; private set; }
+        /// <summary>
         /// 상품 이름
         /// </summary>
         public string Name { get; private set; }
@@ -38,9 +42,10 @@
         /// <param name="Name">상품 명</param>
         /// <param name="Price">상품 가격</param>
         /// <returns>상품</returns>
-        public static Product Create(string Name, int Price)
+        public static Product Create(int id ,string Name, int Price)
         {
             Product product = new Product();
+            product.Id = id;
             product.Name = Name;
             product.Price = Price;
 
