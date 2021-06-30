@@ -8,3 +8,12 @@ C:\Users\pclou\Desktop\C# Project\ConvenienceStore\ConvenienceStore\obj\Debug\Co
 C:\Users\pclou\Desktop\C# Project\ConvenienceStore\ConvenienceStore\obj\Debug\ConvenienceStore.csproj.CoreCompileInputs.cache
 C:\Users\pclou\Desktop\C# Project\ConvenienceStore\ConvenienceStore\obj\Debug\ConvenienceStore.exe
 C:\Users\pclou\Desktop\C# Project\ConvenienceStore\ConvenienceStore\obj\Debug\ConvenienceStore.pdb
+C:\Users\CShrimp\Desktop\Git\ConvenienceStore\ConvenienceStore\obj\Debug\ConvenienceStore.Form1.resources
+C:\Users\CShrimp\Desktop\Git\ConvenienceStore\ConvenienceStore\obj\Debug\ConvenienceStore.Properties.Resources.resources
+C:\Users\CShrimp\Desktop\Git\ConvenienceStore\ConvenienceStore\obj\Debug\ConvenienceStore.csproj.GenerateResource.cache
+C:\Users\CShrimp\Desktop\Git\ConvenienceStore\ConvenienceStore\obj\Debug\ConvenienceStore.csproj.CoreCompileInputs.cache
+C:\Users\CShrimp\Desktop\Git\ConvenienceStore\ConvenienceStore\bin\Debug\ConvenienceStore.exe.config
+C:\Users\CShrimp\Desktop\Git\ConvenienceStore\ConvenienceStore\bin\Debug\ConvenienceStore.exe
+C:\Users\CShrimp\Desktop\Git\ConvenienceStore\ConvenienceStore\bin\Debug\ConvenienceStore.pdb
+C:\Users\CShrimp\Desktop\Git\ConvenienceStore\ConvenienceStore\obj\Debug\ConvenienceStore.exe
+C:\Users\CShrimp\Desktop\Git\ConvenienceStore\ConvenienceStore\obj\Debug\ConvenienceStore.pdb

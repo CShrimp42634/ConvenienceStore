@@ -15,7 +15,7 @@ namespace ConvenienceStore.src.model
         /// <param name="name">삼품 명</param>
         /// <param name="price">삼품 가격</param>
         /// <returns>생성된 상품</returns>
-        product CreateProduct(string name, int price);
+        Product CreateProduct(string name, int price);
 
         /// <summary>
         /// 상품 내용 수정 함수
@@ -37,4 +37,5 @@ namespace ConvenienceStore.src.model
         /// <param name="product">저장될 상품</param>
         void SaveProduct(Product product);
     }
+
 }

@@ -1,0 +1,4 @@
+C:\Users\CShrimp\Desktop\Git\ConvenienceStore\ConvenienceStore\obj\Release\ConvenienceStore.Form1.resources
+C:\Users\CShrimp\Desktop\Git\ConvenienceStore\ConvenienceStore\obj\Release\ConvenienceStore.Properties.Resources.resources
+C:\Users\CShrimp\Desktop\Git\ConvenienceStore\ConvenienceStore\obj\Release\ConvenienceStore.csproj.GenerateResource.cache
+C:\Users\CShrimp\Desktop\Git\ConvenienceStore\ConvenienceStore\obj\Release\ConvenienceStore.csproj.CoreCompileInputs.cache
