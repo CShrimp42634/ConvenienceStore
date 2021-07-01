@@ -17,3 +17,4 @@ C:\Users\CShrimp\Desktop\Git\ConvenienceStore\ConvenienceStore\bin\Debug\Conveni
 C:\Users\CShrimp\Desktop\Git\ConvenienceStore\ConvenienceStore\bin\Debug\ConvenienceStore.pdb
 C:\Users\CShrimp\Desktop\Git\ConvenienceStore\ConvenienceStore\obj\Debug\ConvenienceStore.exe
 C:\Users\CShrimp\Desktop\Git\ConvenienceStore\ConvenienceStore\obj\Debug\ConvenienceStore.pdb
+C:\Users\CShrimp\Desktop\Git\ConvenienceStore\ConvenienceStore\obj\Debug\ConvenienceStore.csproj.AssemblyReference.cache

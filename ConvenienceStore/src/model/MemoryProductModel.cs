@@ -1,12 +1,18 @@
 ﻿
 
 using ConvenienceStore.src.domain;
+using System.Collections.Generic;
 
 namespace ConvenienceStore.src.model
 {
     class MemoryProductModel : IProductModel
     {
+        private new Dictionary<int, Product> Products = new Dictionary<int, Product>();
+
         private int Id = 0;
+
+        public object Current { get; private set; }
+
         private int ID
         {
             get { return ++Id; }
@@ -27,9 +33,22 @@ namespace ConvenienceStore.src.model
             throw new System.NotImplementedException();
         }
 
+        public List<Product> GetProductList()
+        {
+            List<Product> Iist = new List<Product>();
+            //이너뮬레이터 - 반복자
+            Dictionary<int, Product>.Enumerator enumerator = Products.GetEnumerator();
+            
+
+            while (enumerator.MoveNext())
+                Iist.Add(enumerator.Current.Value);
+
+            return Iist;
+        }
+
         public void SaveProduct(Product product)
         {
-            throw new System.NotImplementedException();
+            Products.Add(product.Id, product);
         }
     }
 }

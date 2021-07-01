@@ -22,16 +22,20 @@ namespace ConvenienceStore
         private void Form1_Load(object sender, EventArgs e)
         {
             MemoryProductModel memoryProductModel = new MemoryProductModel();
-            Product product = memoryProductModel.CreateProduct("꼬북칩", 3000);
-            Console.WriteLine($"ID: {product.Id}" +
-                $"\nName:{product.Name}" +
-                $"\nPrice:{product.Price}");
+            Product product1 = memoryProductModel.CreateProduct("꼬북칩", 3000);
+            Product product2 = memoryProductModel.CreateProduct("바나나", 3000);
 
+            memoryProductModel.SaveProduct(product1);
+            memoryProductModel.SaveProduct(product2);
 
-            Product product2 = memoryProductModel.CreateProduct("바나나킥", 3000);
-            Console.WriteLine($"ID: {product2.Id}" +
-                $"\nName:{product2.Name}" +
-                $"\nPrice:{product2.Price}");
+            List<Product> products = memoryProductModel.GetProductList();
+            products.ForEach(p =>
+            {
+                Console.WriteLine($"ID: {p.Id }" +
+                $"\nName:{p.Name}" +
+                $"\nPrice:{p.Price}\n");
+                
+            });
         }
     }
 }

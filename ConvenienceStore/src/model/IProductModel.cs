@@ -1,6 +1,7 @@
 ﻿
 
 using ConvenienceStore.src.domain;
+using System.Collections.Generic;
 
 namespace ConvenienceStore.src.model
 {
@@ -16,6 +17,15 @@ namespace ConvenienceStore.src.model
         /// <param name="price">삼품 가격</param>
         /// <returns>생성된 상품</returns>
         Product CreateProduct(string name, int price);
+
+
+        //한개 불러오기
+
+        /// <summary>
+        ///  상품 모두 불러오기
+        /// </summary>
+        /// <returns>상품목록</returns>
+        List<Product> GetProductList();
 
         /// <summary>
         /// 상품 내용 수정 함수
