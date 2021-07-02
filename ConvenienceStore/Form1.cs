@@ -21,7 +21,7 @@ namespace ConvenienceStore
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MemoryProductModel memoryProductModel = new MemoryProductModel();
+            IProductModel memoryProductModel = new MemoryProductModel();
             Product product1 = memoryProductModel.CreateProduct("꼬북칩", 3000);
             Product product2 = memoryProductModel.CreateProduct("바나나", 2000);
             Product product3 = memoryProductModel.CreateProduct("초코", 2000);
@@ -31,7 +31,9 @@ namespace ConvenienceStore
             memoryProductModel.SaveProduct(product3);
 
             memoryProductModel.DeleteProduct(product1.Id);
-            memoryProductModel.DeleteProduct(product3.Id);
+
+
+            product2 = memoryProductModel.EditProduct(product2.Id, "킥", 2500);
 
             List<Product> products = memoryProductModel.GetProductList();
             products.ForEach(p =>

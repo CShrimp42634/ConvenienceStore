@@ -10,6 +10,7 @@ namespace ConvenienceStore.src.model
         private new Dictionary<int, Product> Products = new Dictionary<int, Product>();
 
         private int Id = 0;
+        private Product product;
 
         public object Current { get; private set; }
 
@@ -29,10 +30,25 @@ namespace ConvenienceStore.src.model
             Products.Remove(id);
         }
 
+        /// <summary>
+        /// Edit 함수를 위한 생성 함수.
+        /// </summary>
+        /// <param name="id">수정이 필요한 상품의 아이디</param>
+        /// <param name="name">수정된 이름</param>
+        /// <param name="price">수정된 가격</param>
+        /// <returns></returns>
+        private Product ECreateProduct(int id, string name, int price)
+        {
+            return Product.Create(id, name, price);
+        }
+
         //Edit (에딧ㅌ)
         public Product EditProduct(int id, string editName, int editPrice)
         {
-            throw new System.NotImplementedException();
+            Product product = ECreateProduct(id, editName, editPrice);
+            Products[id] = product;
+
+            return product;
         }
 
         public List<Product> GetProductList()
