@@ -23,10 +23,15 @@ namespace ConvenienceStore
         {
             MemoryProductModel memoryProductModel = new MemoryProductModel();
             Product product1 = memoryProductModel.CreateProduct("꼬북칩", 3000);
-            Product product2 = memoryProductModel.CreateProduct("바나나", 3000);
+            Product product2 = memoryProductModel.CreateProduct("바나나", 2000);
+            Product product3 = memoryProductModel.CreateProduct("초코", 2000);
 
             memoryProductModel.SaveProduct(product1);
             memoryProductModel.SaveProduct(product2);
+            memoryProductModel.SaveProduct(product3);
+
+            memoryProductModel.DeleteProduct(product1.Id);
+            memoryProductModel.DeleteProduct(product3.Id);
 
             List<Product> products = memoryProductModel.GetProductList();
             products.ForEach(p =>

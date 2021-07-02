@@ -23,11 +23,13 @@ namespace ConvenienceStore.src.model
             return Product.Create(ID, name, price);
         }
 
+        //Delete (델리트) - 삭제
         public void DeleteProduct(int id)
         {
-            throw new System.NotImplementedException();
+            Products.Remove(id);
         }
 
+        //Edit (에딧ㅌ)
         public Product EditProduct(int id, string editName, int editPrice)
         {
             throw new System.NotImplementedException();
