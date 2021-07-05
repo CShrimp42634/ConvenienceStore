@@ -2,12 +2,6 @@
 using ConvenienceStore.src.model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ConvenienceStore
@@ -23,8 +17,8 @@ namespace ConvenienceStore
         {
             IProductModel memoryProductModel = new MemoryProductModel();
             Product product1 = memoryProductModel.CreateProduct("꼬북칩", 3000);
-            Product product2 = memoryProductModel.CreateProduct("바나나", 2000);
-            Product product3 = memoryProductModel.CreateProduct("초코", 2000);
+            Product product2 = memoryProductModel.CreateProduct("꼬북칩2", 3000);
+            Product product3 = memoryProductModel.CreateProduct("다이제", 5000);
 
             memoryProductModel.SaveProduct(product1);
             memoryProductModel.SaveProduct(product2);
@@ -32,16 +26,14 @@ namespace ConvenienceStore
 
             memoryProductModel.DeleteProduct(product1.Id);
 
-
-            product2 = memoryProductModel.EditProduct(product2.Id, "킥", 2500);
-
+            product2 = memoryProductModel.EditProduct(product2.Id, "브이콘", 1500);
+             
             List<Product> products = memoryProductModel.GetProductList();
             products.ForEach(p =>
             {
-                Console.WriteLine($"ID: {p.Id }" +
+                Console.WriteLine($"ID: {p.Id}" +
                 $"\nName:{p.Name}" +
                 $"\nPrice:{p.Price}\n");
-                
             });
         }
     }

@@ -1,19 +1,14 @@
-﻿
-
-using ConvenienceStore.src.domain;
+﻿using ConvenienceStore.src.domain;
 using System.Collections.Generic;
 
 namespace ConvenienceStore.src.model
 {
     class MemoryProductModel : IProductModel
     {
-        private new Dictionary<int, Product> Products = new Dictionary<int, Product>();
+        // 상품 저장 공간
+        private Dictionary<int, Product> Products = new Dictionary<int, Product>();
 
         private int Id = 0;
-        private Product product;
-
-        public object Current { get; private set; }
-
         private int ID
         {
             get { return ++Id; }
@@ -24,10 +19,21 @@ namespace ConvenienceStore.src.model
             return Product.Create(ID, name, price);
         }
 
-        //Delete (델리트) - 삭제
-        public void DeleteProduct(int id)
+        public void SaveProduct(Product product)
         {
-            Products.Remove(id);
+            Products.Add(product.Id, product);
+        }
+
+        public List<Product> GetProductList()
+        {
+            List<Product> list = new List<Product>();
+            // 이너뮬레이터 - 반복자
+            Dictionary<int, Product>.Enumerator enumerator = Products.GetEnumerator();
+
+            while (enumerator.MoveNext())
+                list.Add(enumerator.Current.Value);
+
+            return list;
         }
 
         /// <summary>
@@ -42,31 +48,19 @@ namespace ConvenienceStore.src.model
             return Product.Create(id, name, price);
         }
 
-        //Edit (에딧ㅌ)
+        //Edit (에딧ㅌ) - 수정
         public Product EditProduct(int id, string editName, int editPrice)
         {
+            // 불변성
             Product product = ECreateProduct(id, editName, editPrice);
             Products[id] = product;
 
             return product;
         }
-
-        public List<Product> GetProductList()
+        //Delete(델리트) - 삭제
+        public void DeleteProduct(int id)
         {
-            List<Product> Iist = new List<Product>();
-            //이너뮬레이터 - 반복자
-            Dictionary<int, Product>.Enumerator enumerator = Products.GetEnumerator();
-            
-
-            while (enumerator.MoveNext())
-                Iist.Add(enumerator.Current.Value);
-
-            return Iist;
-        }
-
-        public void SaveProduct(Product product)
-        {
-            Products.Add(product.Id, product);
+            Products.Remove(id);
         }
     }
 }
