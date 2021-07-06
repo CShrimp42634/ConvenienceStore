@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{017329CE-BF29-4C77-B18A-D5E3AB25B208}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>ConvenienceStore</RootNamespace>
     <AssemblyName>ConvenienceStore</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -54,19 +54,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddProductDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProductDialog.Designer.cs">
+      <DependentUpon>AddProductDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditProductDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditProductDialog.Designer.cs">
+      <DependentUpon>EditProductDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductsForm.Designer.cs">
+      <DependentUpon>ProductsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\domain\Product.cs" />
     <Compile Include="src\model\IProductModel.cs" />
     <Compile Include="src\model\MemoryProductModel.cs" />
+    <EmbeddedResource Include="AddProductDialog.resx">
+      <DependentUpon>AddProductDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditProductDialog.resx">
+      <DependentUpon>EditProductDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductsForm.resx">
+      <DependentUpon>ProductsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

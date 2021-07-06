@@ -15,26 +15,25 @@ namespace ConvenienceStore
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            IProductModel memoryProductModel = new MemoryProductModel();
-            Product product1 = memoryProductModel.CreateProduct("꼬북칩", 3000);
-            Product product2 = memoryProductModel.CreateProduct("꼬북칩2", 3000);
-            Product product3 = memoryProductModel.CreateProduct("다이제", 5000);
+            ProductsForm form = new ProductsForm();
+            form.Show();
+        }
 
-            memoryProductModel.SaveProduct(product1);
-            memoryProductModel.SaveProduct(product2);
-            memoryProductModel.SaveProduct(product3);
+        /// <summary>
+        /// 주문 목록 리스트의 크기를 변경하지 못하도록 추가한 함수
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void lvOrders_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
+        {
+            e.NewWidth = lvOrders.Columns[e.ColumnIndex].Width;
+            e.Cancel = true;
+        }
 
-            memoryProductModel.DeleteProduct(product1.Id);
-
-            product2 = memoryProductModel.EditProduct(product2.Id, "브이콘", 1500);
-             
-            List<Product> products = memoryProductModel.GetProductList();
-            products.ForEach(p =>
-            {
-                Console.WriteLine($"ID: {p.Id}" +
-                $"\nName:{p.Name}" +
-                $"\nPrice:{p.Price}\n");
-            });
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+            // TODO 상품이 없을 때 경고 메시지 출력
+            MessageBox.Show("결제 주문이 없습니다.");
         }
     }
 }

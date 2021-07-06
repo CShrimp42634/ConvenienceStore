@@ -8,3 +8,6 @@ C:\Users\pclou\Desktop\C# Project\ConvenienceStore\ConvenienceStore\obj\Debug\Co
 C:\Users\pclou\Desktop\C# Project\ConvenienceStore\ConvenienceStore\obj\Debug\ConvenienceStore.csproj.CoreCompileInputs.cache
 C:\Users\pclou\Desktop\C# Project\ConvenienceStore\ConvenienceStore\obj\Debug\ConvenienceStore.exe
 C:\Users\pclou\Desktop\C# Project\ConvenienceStore\ConvenienceStore\obj\Debug\ConvenienceStore.pdb
+C:\Users\pclou\Desktop\C# Project\ConvenienceStore\ConvenienceStore\obj\Debug\ConvenienceStore.ProductsForm.resources
+C:\Users\pclou\Desktop\C# Project\ConvenienceStore\ConvenienceStore\obj\Debug\ConvenienceStore.AddProductDialog.resources
+C:\Users\pclou\Desktop\C# Project\ConvenienceStore\ConvenienceStore\obj\Debug\ConvenienceStore.EditProductDialog.resources
